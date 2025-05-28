@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amb Soikat</title>
+  <link rel="shortcut icon" href="img/icon.svg" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+</head>
+<body class="bg-black text-white font-[Poppins,sans-serif]">
+
+  <!-- Navbar -->
+  <nav class="bg-gray-900 shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center cursor-pointer select-none">
+        <span class="text-purple-400 font-extrabold text-2xl tracking-wide">Amb</span>
+        <span class="text-gray-300 font-semibold text-1xl ml-1">soikat</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-gray-300 hover:text-purple-400 font-medium">Home</a>
+        <a href="#about" class="text-gray-300 hover:text-purple-400 font-medium">About</a>
+        <a href="#skills" class="text-gray-300 hover:text-purple-400 font-medium">Skills</a>
+        <a href="#projects" class="text-gray-300 hover:text-purple-400 font-medium">Projects</a>
+        <a href="#contact" class="text-gray-300 hover:text-purple-400 font-medium">Contact</a>
+        <a href="soikat_cv.pdf" download class="border border-purple-500 text-purple-400 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-500 hover:text-white transition flex items-center">
+          <i class="fas fa-download mr-2"></i> Download CV
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="text-gray-300 hover:text-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-500">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-2">
+  <a href="#hero" class="block text-gray-300 hover:text-purple-400 font-medium">Home</a>
+  <a href="#about" class="block text-gray-300 hover:text-purple-400 font-medium">About</a>
+  <a href="#skills" class="text-gray-300 hover:text-purple-400 font-medium">Skills</a>
+  <a href="#projects" class="block text-gray-300 hover:text-purple-400 font-medium">Projects</a>
+  <a href="#contact" class="block text-gray-300 hover:text-purple-400 font-medium">Contact</a>
+  <a href="soikat_cv.pdf" download class="block w-max mx-auto border border-purple-500 text-purple-400 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-purple-500 hover:text-white transition flex items-center">
+    <i class="fas fa-download mr-2"></i> Download CV
+  </a>
+</div>
+</nav>
+
+  <!-- Hero section -->
+ <section class="relative w-full min-h-[500px] bg-gradient-to-r from-white via-gray-200 to-gray-400 flex items-center py-16 px-6 md:px-12 overflow-hidden">
+  <!-- Abstract shapes (multiple SVGs) -->
+  <svg class="absolute top-4 left-4 w-32 h-32 md:w-48 md:h-48 text-gray-300 opacity-20" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <circle cx="50" cy="50" r="50" />
+  </svg>
+  <svg class="absolute bottom-4 right-4 w-48 h-48 md:w-72 md:h-72 text-gray-400 opacity-15" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <rect width="100" height="100" rx="20" />
+  </svg>
+  <svg class="absolute top-20 right-12 w-24 h-24 md:w-32 md:h-32 text-gray-300 opacity-15" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <polygon points="50,0 100,100 0,100" />
+  </svg>
+  <svg class="absolute bottom-24 left-16 w-20 h-20 md:w-28 md:h-28 text-gray-400 opacity-10" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <ellipse cx="50" cy="50" rx="50" ry="25" />
+  </svg>
+  <svg class="absolute top-32 left-48 w-16 h-16 md:w-24 md:h-24 text-gray-300 opacity-10" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <circle cx="50" cy="50" r="50" />
+  </svg>
+  <svg class="absolute bottom-16 right-48 w-28 h-28 md:w-36 md:h-36 text-gray-400 opacity-15" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+    <rect width="100" height="100" rx="15" />
+  </svg>
+
+  <!-- Content Container -->
+  <div class="relative max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 w-full text-gray-900 z-10">
+    <!-- Left Content -->
+    <div class="w-full md:w-1/2 text-center md:text-left space-y-4 px-2 md:px-0">
+      <p class="text-purple-600 text-xl font-semibold">👋 Hello, I'm</p>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-snug">
+        <span class="text-purple-600">Amb</span>
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-500">Soikat</span>
+      </h2>
+      <p class="text-gray-700 text-lg font-medium"><i class="fas fa-code mr-2"></i>Web Designer</p>
+      <p class="text-gray-700 max-w-md mx-auto md:mx-0 leading-relaxed">
+        Designing with passion for great user experience.
+      </p>
+
+      <p class="mt-3 flex items-center justify-center md:justify-start gap-2 text-gray-700">
+        <i class="fas fa-envelope text-purple-600"></i>
+        <a href="mailto:ambsoikat@gmail.com" class="hover:text-purple-600 transition">ambsoikat@gmail.com</a>
+      </p>
+      <p class="flex items-center justify-center md:justify-start gap-2 text-gray-700">
+        <i class="fas fa-map-marker-alt text-purple-600"></i>
+        Chottogram, Feni Sadar, Feni
+      </p>
+
+      <!-- Social Buttons -->
+      <div class="flex justify-center md:justify-start space-x-4 pt-4">
+        <a href="https://www.facebook.com/ambsoikat" target="_blank" class="border border-blue-600 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full hover:bg-blue-600 hover:text-white transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/amb_soi_kat" target="_blank" class="border border-pink-500 text-pink-500 w-12 h-12 flex items-center justify-center rounded-full hover:bg-pink-500 hover:text-white transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/ambsoikat" target="_blank" class="border border-gray-700 text-gray-700 w-12 h-12 flex items-center justify-center rounded-full hover:bg-gray-700 hover:text-white transition">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Design Block -->
+    <div class="w-full md:w-1/2 flex justify-end items-center px-2 md:px-0">
+      <div class="rounded-2xl px-8 py-10 text-center max-w-sm w-full shadow-none">
+        <!-- গ্রেডিয়েন্ট বর্ডারের জন্য প্যারেন্ট -->
+        <div class="rounded-full p-1 bg-gradient-to-r from-purple-600 to-pink-500 inline-block mx-auto mb-6 shadow-lg">
+          <img src="img/about.jpg" alt="Soikat" class="w-32 h-32 rounded-full block border-4 border-white">
+        </div>
+        <!-- নাম বাদ দেওয়া হলো -->
+        <p class="text-gray-800 text-base font-medium italic">Passionate Web Designer</p>
+        <p class="text-sm text-gray-600 mt-2">Crafting beautiful and user-friendly web experiences.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section id="about" class="bg-gray-100 py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center mb-16 px-4 md:px-0">
+    <p class="text-purple-500 text-sm uppercase tracking-widest font-semibold">Who I Am</p>
+    <h2 class="text-4xl font-extrabold text-gray-900 mt-2">About My Resume</h2>
+    <p class="text-gray-600 mt-3 max-w-xl mx-auto leading-relaxed">
+      A brief introduction about myself, my skills and experiences that define my professional journey.
+    </p>
+  </div>
+
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12 px-4 md:px-0">
+    <!-- Cards -->
+    <div class="w-full md:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <!-- Info Card Template -->
+      <div class="group relative bg-white p-6 rounded-xl border border-gray-300 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-default">
+        <span class="absolute inset-0 bg-gradient-to-r from-purple-400 to-transparent opacity-0 group-hover:opacity-20 transition-all duration-300 rounded-xl"></span>
+        <p class="text-gray-500 text-sm flex items-center gap-2">
+          <i class="fas fa-user text-purple-400"></i> Name
+        </p>
+        <h3 class="text-gray-900 text-xl font-bold">Amb Soikat</h3>
+      </div>
+
+      <div class="group relative bg-white p-6 rounded-xl border border-gray-300 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-default">
+        <span class="absolute inset-0 bg-gradient-to-r from-purple-400 to-transparent opacity-0 group-hover:opacity-20 transition-all duration-300 rounded-xl"></span>
+        <p class="text-gray-500 text-sm flex items-center gap-2">
+          <i class="fas fa-hourglass-half text-purple-400"></i> Age
+        </p>
+        <h3 class="text-gray-900 text-xl font-bold">21</h3>
+      </div>
+
+      <div class="group relative bg-white p-6 rounded-xl border border-gray-300 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-default">
+        <span class="absolute inset-0 bg-gradient-to-r from-purple-400 to-transparent opacity-0 group-hover:opacity-20 transition-all duration-300 rounded-xl"></span>
+        <p class="text-gray-500 text-sm flex items-center gap-2">
+          <i class="fas fa-tint text-purple-400"></i> Blood
+        </p>
+        <h3 class="text-gray-900 text-xl font-bold">O+</h3>
+      </div>
+
+      <div class="group relative bg-white p-6 rounded-xl border border-gray-300 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-default">
+        <span class="absolute inset-0 bg-gradient-to-r from-purple-400 to-transparent opacity-0 group-hover:opacity-20 transition-all duration-300 rounded-xl"></span>
+        <p class="text-gray-500 text-sm flex items-center gap-2">
+          <i class="fas fa-globe text-purple-400"></i> Country
+        </p>
+        <h3 class="text-gray-900 text-xl font-bold">Bangladesh</h3>
+      </div>
+
+      <div class="group relative bg-white p-6 rounded-xl border border-gray-300 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-default">
+        <span class="absolute inset-0 bg-gradient-to-r from-purple-400 to-transparent opacity-0 group-hover:opacity-20 transition-all duration-300 rounded-xl"></span>
+        <p class="text-gray-500 text-sm flex items-center gap-2">
+          <i class="fas fa-mosque text-purple-400"></i> Religion
+        </p>
+        <h3 class="text-gray-900 text-xl font-bold">Islam</h3>
+      </div>
+
+      <div class="group relative bg-white p-6 rounded-xl border border-gray-300 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-default">
+        <span class="absolute inset-0 bg-gradient-to-r from-purple-400 to-transparent opacity-0 group-hover:opacity-20 transition-all duration-300 rounded-xl"></span>
+        <p class="text-gray-500 text-sm flex items-center gap-2">
+          <i class="fas fa-phone-alt text-purple-400"></i> Mobile
+        </p>
+        <h3 class="text-gray-800 text-lg font-semibold">+880 1855-975556</h3>
+      </div>
+
+      <div class="group relative bg-white p-6 rounded-xl border border-gray-300 col-span-1 sm:col-span-2 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-default">
+        <span class="absolute inset-0 bg-gradient-to-r from-purple-400 to-transparent opacity-0 group-hover:opacity-20 transition-all duration-300 rounded-xl"></span>
+        <p class="text-gray-500 text-sm flex items-center gap-2">
+          <i class="fas fa-envelope text-purple-400"></i> Email
+        </p>
+        <h3 class="text-gray-800 text-lg font-semibold break-words">ambsoikat@gmail.com</h3>
+      </div>
+
+      <div class="group relative bg-white p-6 rounded-xl border border-gray-300 col-span-1 sm:col-span-2 overflow-hidden hover:shadow-xl transition-all duration-300 cursor-default">
+        <span class="absolute inset-0 bg-gradient-to-r from-purple-400 to-transparent opacity-0 group-hover:opacity-20 transition-all duration-300 rounded-xl"></span>
+        <p class="text-gray-500 text-sm flex items-center gap-2">
+          <i class="fas fa-map-marker-alt text-purple-400"></i> Address
+        </p>
+        <h3 class="text-gray-800 text-lg font-semibold">Feni Sadar, Chottogram, Bangladesh</h3>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="w-full md:w-1/2 grid place-items-center mt-12 ml-0 md:ml-12">
+      <img src="img/about.jpg" alt="Amb Soikat"
+        class="rounded-xl shadow-2xl w-72 sm:w-80 h-auto object-cover transition duration-500 ease-in-out hover:shadow-[0_0_15px_8px_rgba(128,0,128,0.3)]"
+      />
+    </div>
+  </div>
+</section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="bg-gray-100 py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center mb-12">
+    <p class="text-purple-500 text-sm uppercase tracking-widest font-semibold">My Skills</p>
+    <h2 class="text-4xl font-extrabold text-gray-900 mt-2">What I Know</h2>
+    <p class="text-gray-600 mt-3 max-w-2xl mx-auto leading-relaxed">
+      Here's a quick overview of my skills with visual progress and highlights.
+    </p>
+  </div>
+
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+    <!-- Left: Progress Bars -->
+    <div class="space-y-6">
+      <!-- Skill Item Template -->
+      <div class="group hover:bg-purple-100 p-4 rounded-lg transition h-28">
+        <div class="flex justify-between items-center mb-1 font-medium text-gray-800" aria-label="HTML skill proficiency">
+          <span class="flex items-center gap-2">
+            <i class="fab fa-html5 text-orange-500" aria-hidden="true"></i> HTML
+          </span>
+          <span>95%</span>
+        </div>
+        <div class="w-full bg-gray-300 rounded-full h-4 overflow-hidden" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="HTML proficiency bar">
+          <div class="bg-orange-500 h-4 rounded-full transition-all duration-700" style="width: 95%"></div>
+        </div>
+      </div>
+
+      <!-- Repeat the same structure for other skills -->
+
+      <div class="group hover:bg-purple-100 p-4 rounded-lg transition h-28">
+        <div class="flex justify-between items-center mb-1 font-medium text-gray-800" aria-label="CSS skill proficiency">
+          <span class="flex items-center gap-2">
+            <i class="fab fa-css3-alt text-blue-500" aria-hidden="true"></i> CSS
+          </span>
+          <span>85%</span>
+        </div>
+        <div class="w-full bg-gray-300 rounded-full h-4 overflow-hidden" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="CSS proficiency bar">
+          <div class="bg-blue-500 h-4 rounded-full transition-all duration-700" style="width: 85%"></div>
+        </div>
+      </div>
+
+      <div class="group hover:bg-purple-100 p-4 rounded-lg transition h-28">
+        <div class="flex justify-between items-center mb-1 font-medium text-gray-800" aria-label="Web Design skill proficiency">
+          <span class="flex items-center gap-2">
+            <i class="fas fa-laptop-code text-indigo-500" aria-hidden="true"></i> Web Design
+          </span>
+          <span>90%</span>
+        </div>
+        <div class="w-full bg-gray-300 rounded-full h-4 overflow-hidden" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Web Design proficiency bar">
+          <div class="bg-indigo-500 h-4 rounded-full transition-all duration-700" style="width: 90%"></div>
+        </div>
+      </div>
+
+      <div class="group hover:bg-purple-100 p-4 rounded-lg transition h-28">
+        <div class="flex justify-between items-center mb-1 font-medium text-gray-800" aria-label="Data Entry skill proficiency">
+          <span class="flex items-center gap-2">
+            <i class="fas fa-keyboard text-green-500" aria-hidden="true"></i> Data Entry
+          </span>
+          <span>80%</span>
+        </div>
+        <div class="w-full bg-gray-300 rounded-full h-4 overflow-hidden" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Data Entry proficiency bar">
+          <div class="bg-green-500 h-4 rounded-full transition-all duration-700" style="width: 80%"></div>
+        </div>
+      </div>
+
+      <div class="group hover:bg-purple-100 p-4 rounded-lg transition h-28">
+        <div class="flex justify-between items-center mb-1 font-medium text-gray-800" aria-label="MS Office skill proficiency">
+          <span class="flex items-center gap-2">
+            <i class="fas fa-file-word text-blue-700" aria-hidden="true"></i> MS Office
+          </span>
+          <span>85%</span>
+        </div>
+        <div class="w-full bg-gray-300 rounded-full h-4 overflow-hidden" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="MS Office proficiency bar">
+          <div class="bg-blue-700 h-4 rounded-full transition-all duration-700" style="width: 85%"></div>
+        </div>
+      </div>
+
+      <div class="group hover:bg-purple-100 p-4 rounded-lg transition h-28">
+        <div class="flex justify-between items-center mb-1 font-medium text-gray-800" aria-label="Graphics Design skill proficiency">
+          <span class="flex items-center gap-2">
+            <i class="fas fa-paint-brush text-pink-500" aria-hidden="true"></i> Graphics Design
+          </span>
+          <span>75%</span>
+        </div>
+        <div class="w-full bg-gray-300 rounded-full h-4 overflow-hidden" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" aria-label="Graphics Design proficiency bar">
+          <div class="bg-pink-500 h-4 rounded-full transition-all duration-700" style="width: 75%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Skill Cards -->
+    <div class="grid gap-6">
+      <div class="flex items-center gap-4 bg-white p-5 rounded-lg shadow hover:bg-purple-100 transition h-28" role="listitem" tabindex="0" aria-label="HTML skill card">
+        <i class="fab fa-html5 text-orange-500 text-3xl" aria-hidden="true"></i>
+        <span class="font-semibold text-gray-800 text-lg">HTML</span>
+      </div>
+
+      <div class="flex items-center gap-4 bg-white p-5 rounded-lg shadow hover:bg-purple-100 transition h-28" role="listitem" tabindex="0" aria-label="CSS skill card">
+        <i class="fab fa-css3-alt text-blue-500 text-3xl" aria-hidden="true"></i>
+        <span class="font-semibold text-gray-800 text-lg">CSS</span>
+      </div>
+
+      <div class="flex items-center gap-4 bg-white p-5 rounded-lg shadow hover:bg-purple-100 transition h-28" role="listitem" tabindex="0" aria-label="Web Design skill card">
+        <i class="fas fa-laptop-code text-indigo-500 text-3xl" aria-hidden="true"></i>
+        <span class="font-semibold text-gray-800 text-lg">Web Design</span>
+      </div>
+
+      <div class="flex items-center gap-4 bg-white p-5 rounded-lg shadow hover:bg-purple-100 transition h-28" role="listitem" tabindex="0" aria-label="Data Entry skill card">
+        <i class="fas fa-keyboard text-green-500 text-3xl" aria-hidden="true"></i>
+        <span class="font-semibold text-gray-800 text-lg">Data Entry</span>
+      </div>
+
+      <div class="flex items-center gap-4 bg-white p-5 rounded-lg shadow hover:bg-purple-100 transition h-28" role="listitem" tabindex="0" aria-label="MS Office skill card">
+        <i class="fas fa-file-word text-blue-700 text-3xl" aria-hidden="true"></i>
+        <span class="font-semibold text-gray-800 text-lg">MS Office</span>
+      </div>
+
+      <div class="flex items-center gap-4 bg-white p-5 rounded-lg shadow hover:bg-purple-100 transition h-28" role="listitem" tabindex="0" aria-label="Graphics Design skill card">
+        <i class="fas fa-paint-brush text-pink-500 text-3xl" aria-hidden="true"></i>
+        <span class="font-semibold text-gray-800 text-lg">Graphics Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Project Section -->
+  <section id="projects" class="bg-gray-100 py-20 px-6">
+  <div class="max-w-5xl mx-auto text-center mb-10">
+    <p class="text-purple-500 text-sm uppercase tracking-widest font-semibold">My Projects</p>
+    <h2 class="text-4xl font-extrabold text-gray-900 mt-2">What I've Built</h2>
+  </div>
+
+  <div class="relative max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg">
+    <!-- Slides wrapper -->
+    <div id="slider" class="flex transition-transform duration-700 ease-in-out will-change-transform">
+      
+      <!-- Slide 1 -->
+      <div class="w-full flex-shrink-0">
+        <img src="img/titpr.png" alt="Tit Solutions" class="w-full h-64 object-cover rounded-t-lg">
+        <div class="p-6 bg-white rounded-b-lg">
+          <h3 class="text-xl font-semibold text-gray-900">Tit Solutions</h3>
+          <p class="text-gray-600 mt-2">An IT firm website currently live in the UK, designed and deployed.</p>
+          <a href="https://www.titsolutions.co.uk" target="_blank" rel="noopener noreferrer"
+            class="text-purple-600 hover:text-purple-700 mt-2 inline-block no-underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="w-full flex-shrink-0">
+        <img src="img/bangla_tigers.png" alt="Bangla Tigers" class="w-full h-64 object-cover rounded-t-lg">
+        <div class="p-6 bg-white rounded-b-lg">
+          <h3 class="text-xl font-semibold text-gray-900">Bangla Tigers</h3>
+          <p class="text-gray-600 mt-2">An eCommerce website built for online product sales.</p>
+          <a href="https://ambsoikat.github.io/Bangla_tiger-s/" target="_blank" rel="noopener noreferrer"
+            class="text-purple-600 hover:text-purple-700 mt-2 inline-block no-underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="w-full flex-shrink-0">
+        <img src="img/old_things.png" alt="Old Things" class="w-full h-64 object-cover rounded-t-lg">
+        <div class="p-6 bg-white rounded-b-lg">
+          <h3 class="text-xl font-semibold text-gray-900">Old Things</h3>
+          <p class="text-gray-600  mt-2">A Saudi-based marketplace for old ACs, refrigerators, and scrap items.</p>
+          <a href="https://ambsoikat.github.io/oldthings/" target="_blank" rel="noopener noreferrer"
+            class="text-purple-600 hover:text-purple-700 mt-2 inline-block no-underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="w-full flex-shrink-0">
+        <img src="img/consto.png" alt="Construction" class="w-full h-64 object-cover rounded-t-lg">
+        <div class="p-6 bg-white rounded-b-lg">
+          <h3 class="text-xl font-semibold text-gray-900">Construction</h3>
+          <p class="text-gray-600 mt-2">A site featuring various construction-related services and project details.</p>
+          <a href="https://ambsoikat.github.io/Construction/" target="_blank" rel="noopener noreferrer"
+            class="text-purple-600 hover:text-purple-700 mt-2 inline-block no-underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="w-full flex-shrink-0">
+        <img src="img/foodies.png" alt="Foodies" class="w-full h-64 object-cover rounded-t-lg">
+        <div class="p-6 bg-white rounded-b-lg">
+          <h3 class="text-xl font-semibold text-gray-900">Foodies</h3>
+          <p class="text-gray-600 mt-2">Restaurant eCommerce website for all types of food items.</p>
+          <a href="https://ambsoikat.github.io/foodies/" target="_blank" rel="noopener noreferrer"
+            class="text-purple-600 hover:text-purple-700 mt-2 inline-block no-underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="w-full flex-shrink-0">
+        <img src="img/dubai.png" alt="Dubai Pure Clean" class="w-full h-64 object-cover rounded-t-lg">
+        <div class="p-6 bg-white rounded-b-lg">
+          <h3 class="text-xl font-semibold text-gray-900">Dubai Pure Clean</h3>
+          <p class="text-gray-600 mt-2">A service-based site designed for cleaning businesses in Dubai.</p>
+          <a href="https://ambsoikat.github.io/DubaiPureClean/" target="_blank" rel="noopener noreferrer"
+            class="text-purple-600 hover:text-purple-700 mt-2 inline-block no-underline">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Slide 7 -->
+      <div class="w-full flex-shrink-0">
+        <img src="img/coffo.png" alt="Coffee" class="w-full h-64 object-cover rounded-t-lg">
+        <div class="p-6 bg-white rounded-b-lg">
+          <h3 class="text-xl font-semibold text-gray-900">Coffo</h3>
+          <p class="text-gray-600  mt-2">A minimal design project for selling various types of coffee online.</p>
+          <a href="https://ambsoikat.github.io/Coffe/" target="_blank" rel="noopener noreferrer"
+            class="text-purple-600 hover:text-purple-700 mt-2 inline-block no-underline">View Project →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arrows -->
+    <button id="prev" aria-label="Previous Slide" class="absolute top-1/2 left-3 -translate-y-1/2 z-10 
+      text-lg text-purple-600 
+      backdrop-blur-sm bg-white/30 
+      hover:bg-purple-100 
+      p-2 w-9 h-9 rounded-full shadow-md flex items-center justify-center select-none">
+      &#8592;
+    </button>
+
+    <button id="next" aria-label="Next Slide" class="absolute top-1/2 right-3 -translate-y-1/2 z-10 
+      text-lg text-purple-600 
+      backdrop-blur-sm bg-white/30 
+      hover:bg-purple-100
+      p-2 w-9 h-9 rounded-full shadow-md flex items-center justify-center select-none">
+      &#8594;
+    </button>
+  </div>
+
+</section>
+
+  <!-- Contact section -->
+  <section id="contact" class="bg-gray-100 py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center mb-12">
+    <p class="text-purple-500 text-sm uppercase tracking-widest font-semibold">Contact</p>
+    <h2 class="text-4xl font-extrabold text-gray-900 mt-2">Get in Touch With Me</h2>
+  </div>
+
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+    <!-- Contact Form Card -->
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md flex flex-col justify-between">
+      <h3 class="text-2xl font-bold text-gray-900 mb-6">Send a Message</h3>
+      <form class="space-y-5" action="#" method="POST" novalidate>
+        <label for="name" class="sr-only">Your Name</label>
+        <input id="name" name="name" type="text" placeholder="Your Name" required
+          class="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-300 hover:ring-2 hover:ring-purple-300">
+
+        <label for="email" class="sr-only">Your Email</label>
+        <input id="email" name="email" type="email" placeholder="Your Email" required
+          class="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-300 hover:ring-2 hover:ring-purple-300">
+
+        <label for="message" class="sr-only">Your Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message" required
+          class="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-800 focus:ring-2 focus:ring-purple-500 focus:outline-none transition duration-300 hover:ring-2 hover:ring-purple-300"></textarea>
+
+        <button type="submit"
+          class="border border-purple-600 text-purple-600 px-6 py-3 rounded-md font-medium flex items-center gap-2 hover:bg-purple-600 hover:text-white transition duration-300">
+          <i class="fas fa-paper-plane"></i>
+          Send Message
+      </button>
+
+      </form>
+    </div>
+
+    <!-- Career Summary Card -->
+    <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md flex flex-col justify-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-4">My Career Summary</h3>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+        I began my journey in 2019 by learning <strong>MS Office</strong>. In 2021, I expanded my skills into <strong>Web Design</strong> and other digital tools. Over the last <strong>2–3 years</strong>, I've gained valuable experience designing websites and working on multiple creative projects.<br><br>
+        Currently, I’m pursuing a <strong>Diploma in CST (Computer Science & Technology)</strong>, continuously growing in the field of web design and development. I am passionate about building clean, user-friendly, and responsive designs that enhance user experience.
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer section -->
+<footer class="bg-gray-900 text-gray-300 py-10">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+    
+    <!-- Brand Info -->
+    <div>
+      <h2 class="text-2xl font-bold text-white">Amb Soikat</h2>
+      <p class="mt-3 text-sm">
+        Passionate web designer crafting modern & responsive websites with creativity and care.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <nav aria-label="Quick Links">
+      <h3 class="text-xl font-semibold text-white mb-3">Quick Links</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="index.html" class="hover:text-purple-400 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-purple-400 transition">About</a></li>
+        <li><a href="#skills" class="hover:text-purple-400 transition">Skills</a></li>
+        <li><a href="#projects" class="hover:text-purple-400 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-purple-400 transition">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact Me -->
+    <div>
+      <h3 class="text-xl font-semibold text-white mb-3">Contact Me</h3>
+      <div class="flex space-x-4 text-lg mb-6">
+        <a href="https://www.facebook.com/ambsoikat" aria-label="Facebook" class="hover:text-blue-500 transition" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/amb_soi_kat" aria-label="Instagram" class="hover:text-pink-400 transition" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/ambsoikat" aria-label="GitHub" class="hover:text-gray-400 transition" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/amb-soiikat-92689a337" aria-label="LinkedIn" class="hover:text-blue-500 transition" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://wa.me/8801855975556" aria-label="WhatsApp" class="hover:text-green-500 transition" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Text -->
+  <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+    © 2025 
+    <a href="#" class="hover:text-purple-500 transition duration-300 cursor-pointer" aria-label="Amb Soikat's website">
+      Amb Soikat
+    </a>. All rights reserved.
+  </div>
+</footer>
+
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTopBtn"
+    class="fixed bottom-6 right-6 w-12 h-12 bg-purple-600 text-white rounded-full shadow-lg flex items-center justify-center hover:bg-purple-700 transition duration-300 z-50 hidden">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Toggle Script -->
+  <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Slider script
+  const slider = document.getElementById('slider');
+    const totalSlides = slider.children.length;
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    });
+
+    // Auto play every 4 seconds
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }, 4000);
+
+  // scroll button script
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      scrollToTopBtn.classList.remove("hidden");
+    } else {
+      scrollToTopBtn.classList.add("hidden");
+    }
+  });
+
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+</body>
+</html>
