@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ambsoikat.github.io/amb_soikat_portfolio/sitemap.xml
