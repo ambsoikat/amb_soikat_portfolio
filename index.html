@@ -688,7 +688,7 @@
       showSlide(currentIndex);
     }, 4000);
 
-  // scroll button script
+  // scroll top-bottom button script
   const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
   window.addEventListener("scroll", () => {
@@ -705,6 +705,23 @@
       behavior: "smooth"
     });
   });
+
+  // Progress bar animation
+  const progressBars = document.querySelectorAll('.progress-bar');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const width = entry.target.getAttribute('data-width');
+        entry.target.style.width = width;
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  progressBars.forEach(bar => observer.observe(bar));
 </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
